@@ -1,0 +1,177 @@
+:root {
+	/* Primary */
+	--Cyan: hsl(179, 62%, 43%);
+	--Bright-Yellow: hsl(71, 73%, 54%);
+	
+	/* Neutral */
+	--Light-Gray: hsl(204, 43%, 93%);
+	--Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+body {
+	font-family: 'Karla', sans-serif;
+	height: 100vh;
+	margin: 0;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	background-color: var(--Light-Gray);
+}
+
+.padding--config {
+	box-sizing: border-box;
+	padding: 30px 50px;	
+}
+
+.wrapper {
+	display: grid;
+	grid-template: 1fr 1fr / 1fr 1fr;
+	grid-template-areas: "join join" "monthly whyUs";
+	width: 697px;
+  height: 553px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.join {
+	grid-area: join;
+	background-color: #fff;
+	border-radius: 10px 10px 0 0;
+}
+
+.join__title {
+	color: var(--Cyan);
+}
+
+.join__text {
+	color: var(--Grayish-Blue);
+}
+
+.text--green {
+	color: var(--Bright-Yellow);
+	font-weight: 700;
+}
+
+
+.monthlySubs {
+	grid-area: monthly;
+	background-color: var(--Cyan);
+	border-radius: 0 0 0 10px;
+	color: #fff;
+}
+
+.monthlySubs__title {
+}
+
+.monthlySubs__text {
+	font-weight: 700;	
+	font-size: 32px;
+	margin-bottom: 0;
+	position: relative;
+}
+
+.monthlySubs__span {
+	font-weight: 400;
+	font-size: 16px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 77px;
+
+	color: var(--Light-Gray);
+}
+
+.button {
+	display: block;
+	width: 100%;
+
+	box-sizing: border-box;
+	padding: 20px 0;
+
+	text-decoration: none;
+	font-weight: 700;
+	text-align: center;
+
+	color: #fff;
+	background-color: var(--Bright-Yellow);
+
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.whyUs {
+	grid-area: whyUs;
+	background-color: rgba(42, 178, 175, 0.7);
+	border-radius: 0 0 10px 0;
+	color: #fff;
+}
+
+.whyUs__list {
+	list-style: none;
+	padding: 0;
+}
+
+.listItems {
+	margin: 5px 0;
+}
+
+.listItems > a {
+	text-decoration: none;
+	color: var(--Light-Gray);
+}
+
+
+
+	/*media queries*/
+
+@media screen and (max-width: 1200px){
+
+	body {
+		height: 100%;
+	}
+
+	.wrapper{
+		grid-template: repeat(3,1fr) / 1fr ;
+		grid-template-areas: "join" "monthly" "whyUs";
+		width: 375px;
+		height: 100%;
+		margin: 50px 20px;
+	}	
+
+	.padding--config {
+		padding: 30px;
+	}
+
+	.join {
+		border-radius: 10px 10px 0 0;
+	}
+
+	.join__title {
+		font-size: 24px;
+	}
+
+	.monthlySubs {
+		border-radius: 0;
+	}
+
+	.button {
+		margin-top: 25px;
+	}
+
+	.whyUs {
+		border-radius: 0 0 10px 10px;
+	}
+
+}
+
+
+
+
+
+
+
+
